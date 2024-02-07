@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-
+    <script type = "text/javascript" src = "/Users/katbook/Desktop/Projects/bias-diagnosis/landing-page/scripts/main.js"></script>
 </head>
 <body>
     <div class="container-fluid py-5 jumbotron">
@@ -23,39 +23,52 @@
     </div>
     <div class="container py-5">
         <div class="summary">
-            <h2>Project Summary</h2>
-            <p id="project-summary"></p>
+            <h2 class="text-primary">Project summary</h2>
+            <p class="text-secondary">
+                This work extends current evaluation paradigm in fair NLP by proposing to conduct evaluations 
+                of fairness in pretrained language models (LLMs) that go beyond stereotypical scenarios, like gender-occupation or gender emotion. 
+                As the first contribution in this research direction, we propose to diagnose fairness in LLMs in non-stereotypical settings by asking the question:
+                <span class="fw-italic">Are models biased when given unbiased input text?</span>
+            </p>
+            <p class="text-secondary">
+                <span class="fw-bold">Datasets:</span> Focusing on the binary (biological) gender pronoun setting, in addition to repurposing existing 
+                benchmarks (<a href="https://aclanthology.org/N18-2003/">WinoBias</a> 
+                and <a href="https://aclanthology.org/N18-2002/">Winogender</a>) to be devoid of pronounced gender-word associations,
+                this work simultaneously introduces a novel benchmark, <span class="text-primary fw-bold">UnStereoBench</span>, benefiting
+                from minimal gender correlations, larger diversity in topics and sentences' structures.
+            </p>
+            <p class="text-secondary">
+                <span class="fw-bold">Metrics:</span> A new fairness metric is introduced, <span class="text-primary fw-bold">Approximately Equal (AE)</span>,
+                focusing on the non-stereotypical nature of the benchmark.
+                Given sentence pairs, whose sentences differ only in the biological gender pronouns, <span class="text-primary fw-bold">AE</span> measures the 
+                proportion of sentence pairs in which the evaluated LLM assigns approximately equal probabilities to the two sentences in the pair.
+            </p>
+            <p class="text-secondary">
+                <span class="fw-bold">Results:</span> We find that models exhibit bias in non-stereotypical settings.
+            </p>
         </div>
 
 
-    <div class="row align-items-md-stretch">
+    <div class="row text-center">
         <div class="container">
             <div class="slider-container">
                 <h2>Adjust the sliders</h2>
-                <!-- Add your sliders here -->
-                <!-- Example slider -->
                 <label for="maxPMIvalue" class="form-label">Example range</label>
                 <input type="range" class="form-range" id="maxPMIvalue" min="0" max="0.8" value="50">
             </div>
-        </div>
-        <div class="col-md-6">
-            <img src="image1.jpg" alt="Female Sentences">
-        </div>
-
-        <div class="col-md-6">
-            <img src="image2.jpg" alt="Male sentences">
+            <div class="col-md-6 rounded float-start">
+                <img class="img-fluid img-thumbnail" src="image1.jpg" alt="Female Sentences">
+            </div>
+            <div class="col-md-6 rounded float-end">
+                <img class="img-fluid img-thumbnail" src="image2.jpg" alt="Male sentences">
+            </div>
         </div>
     </div>
 </div>
-
-    
-
-
-
-
     <!-- Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
