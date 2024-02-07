@@ -5,28 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Are Models Biased on Text Without Gender-related Language?</title>
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron">
+    <div class="container-fluid py-5 jumbotron">
+        <div class="container">
             <h1 class="display-4">Are Models Biased on Text Without Gender-related Language?</h1>
-            <p class="lead">Catarina Belem, Preethi Seshadri, Yasaman Razeghi, Sameer Singh</p>
+            <p class="lead fw-bold">Catarina Belem, Preethi Seshadri, Yasaman Razeghi, Sameer Singh</p>
             <p class="lead">Work accepted and presented at the main ICLR 2024 conference.</p>
-
-            <p>Stay tuned for updates and more information about our presentation.</p>
             <div class="text-center">
                     <a class="btn btn-primary btn-lg" href="https://openreview.net/forum?id=w1JanwReU6" role="button">View paper</a>
                     <a class="btn btn-primary btn-lg" href="https://github.com/PastelBelem8/gender-bias-diagnosis-benchmark" role="button">View code</a>
-                </div>
             </div>
         </div>
     </div>
+    <div class="container py-5">
+        <div class="summary">
+            <h2>Project Summary</h2>
+            <p id="project-summary"></p>
+        </div>
+
+
+    <div class="row align-items-md-stretch">
+        <div class="container">
+            <div class="slider-container">
+                <h2>Adjust the sliders</h2>
+                <!-- Add your sliders here -->
+                <!-- Example slider -->
+                <label for="maxPMIvalue" class="form-label">Example range</label>
+                <input type="range" class="form-range" id="maxPMIvalue" min="0" max="0.8" value="50">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="image1.jpg" alt="Female Sentences">
+        </div>
+
+        <div class="col-md-6">
+            <img src="image2.jpg" alt="Male sentences">
+        </div>
+    </div>
+</div>
+
+    
+
+
+
+
     <!-- Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>

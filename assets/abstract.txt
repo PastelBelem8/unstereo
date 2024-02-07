@@ -1,0 +1,9 @@
+As large language models are increasingly deployed for a variety of applications, it is imperative to measure and understand how gender biases present in the training data influence model behavior.
+Previous works construct benchmarks around known stereotypes (e.g., occupations) and demonstrate high levels of gender bias in large language models, raising serious concerns about models exhibiting undesirable behaviors.
+An implicit assumption is that models perpetuate biases present in the data by exhibiting gender preferences for words that display high gender associations in the training data.
+In this work, we expand on existing literature by asking the question: \textit{Do large language models still favor one gender over the other in non-stereotypical settings?}
+To tackle this question, we restrict language model evaluation to a \textit{neutral} subset, in which sentences are free of pronounced word-gender associations. 
+After characterizing these associations in terms of pretraining data statistics, we use them to (1) create a new benchmark with low gender-word associations, and (2) repurpose popular benchmarks in the gendered pronoun setting ---\WB and \WG--- removing instances with strongly gender-correlated words.
+Surprisingly, when testing $23$ models (e.g., \llama, \pyth, and \opt) using the proposed benchmarks, we still detect critically high gender bias across all tested models. 
+For instance, after adjusting for strong word-gender associations, we find that all models still exhibit clear gender preferences in about $60\%$-$95\%$ of the sentences.
+By demonstrating that measured bias is not necessarily due to the presence of highly gender-associated words, our work highlights important questions about underlying model biases and bias evaluation more broadly.
